@@ -7,16 +7,13 @@ function handleImgLoad(){
 }
 
 
-
 function paintImage(imgNumber){
     const image = new Image(); //새로운 이미지 객체 생성
     image.src = `images/${imgNumber+1}.jpg`; //Math.random() 함수가 0을 줄 수 있기 때문에 +1
     //${}은 문자열 반환
     image.classList.add("bgImage"); //새로 class 띄움, 새로 css에 추가
-    body.appendChild(image);
-    
-
-
+    // body.appendChild(image); 이미지가 앞에 있으므로 prepend로 가장 뒤에 있게 됨
+    body.prepend(image);
 }
 
 
