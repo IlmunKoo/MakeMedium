@@ -1,8 +1,9 @@
 # Vanila_JS
 
 크롬 익스텐션 momentum을 Vanila JS를 사용해 클론코딩했습니다.
-```
+
 ###기능:
+```
 (1) 시간 화면에 실시간으로 띄우기 
 (2) toDoList update/delete
 (검색창으로 들어오는 값 받아서 LS에 저장,저장된 정보를 끌어서 화면에 표시)
