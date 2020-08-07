@@ -7,7 +7,9 @@ body{
 }
 
   body {
-      color : #34495e;
+    font-size: 2em;
+      color : white;
+      text-align: center;
   }
   
 .clicked{
@@ -23,8 +25,16 @@ body{
     display : block;
 }
 
+.clock{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 4em;
+  color: white;
+  text-align: center;
+}
 
-
+.js-toDoList{
+  list-style: none;
+}
 /* 배경화면에 fadein 효과 주기 */
 @keyframes fadeIn{
   from {
