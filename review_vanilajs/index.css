@@ -1,0 +1,17 @@
+.clock{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 6em;
+}
+.btn{cursor :pointer;}
+
+.form,
+.greetings{
+    display : none;
+}
+
+.showing{
+    display : block;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 4em;
+}
