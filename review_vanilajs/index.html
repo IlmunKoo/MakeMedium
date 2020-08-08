@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review_Clock</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <div class = "js-clock">
+        <h1 class = "clock">00:00</h1>
+    </div>
+    
+    <!--사용자가 이름 치면 사라져야 할 부분 -->
+    <form class="js-form form">
+        <input type="text" placeholder="What is Your name?">
+    </form>
+    <!-- css에 있는 showing(display:block)을 classList.add &remove를 활용해 
+        원하는 부분 보이고 없애기 -->
+
+    <h4 class = "js-greetings greetings"></h4>
+
+    <form class = "js-todoForm">
+        <input type="text" placeholder="Write a todo">
+    </form>
+    
+    <ul class="js-toDoList">
+    </ul>
+
+
+    <script src="clock.js"></script>
+    <script src="greetings.js"></script>
+    <script src="toDo.js"></script>
+</body>
+</html>
