@@ -7,7 +7,7 @@ const form = document.querySelector(".js-form"),  //클래스, 태그, 아이디
 // array안에 하나의 엘리먼트 가져오는 것이 귀찮아서 잘 안씀
 
 const USER_LS = "currentUser", //css에 있는 클래스 이름 가져옴
-    SHOWING_CN = "showing";
+     SHOWING_CN = "showing"; //CN= Class Name
 
 function handleSubmit(event){
     event.preventDefault();    //디폴트 이벤트: form에 입력 후 엔터치면 입력한 것 사라짐
