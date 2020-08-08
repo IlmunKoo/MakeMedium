@@ -7,6 +7,7 @@ const TODOS_LS = 'toDos';
 let toDos = [];
 // 해야 할은 여러 개로 늘어날 수 있으므로 array로 받아야 함
 // localStorage에 저장도 해야 하므로
+// ls에 저장은 객체 형태로 저장
 
 
 function deleteToDo(event){ //eventListener에서 올라옴
@@ -18,7 +19,7 @@ function deleteToDo(event){ //eventListener에서 올라옴
     const btn = event.target;
     const li = btn.parentNode;
     toDoList.removeChild(li);  //node.removeChild : child remove mdn으로 검색
-    const cleanToDos = toDos.filter(function(toDo){
+    const cleanToDos = toDos.filter(function(toDo){ //toDo는 toDos의 원소
         // console.log(toDo.id, li.id);  toDo.id는 숫자, li.id는 string이므로 동작x, parseInt로 정수형 변환
         return toDo.id !== parseInt(li.id);
     }); //모든 li에는 id가 있음
@@ -37,12 +38,6 @@ function deleteToDo(event){ //eventListener에서 올라옴
 
 // filter와 function을 잘 기억!!
 // list에 있는 모든 item을 위한 함수를 실행 
-
-
-
-
-
-
 
 
 
@@ -110,9 +105,11 @@ function loadToDos(){ //로컬스토리지에서 todo정보 가져오는 역할
     const loadedToDos = localStorage.getItem(TODOS_LS);
     if (loadedToDos !== null){ 
         // loadedToDos가 string이라는 문제점->JSON(JavaScript Object Notation, 데이터 전달시 자바스크립트가 이를 다룰 수 있도록 object로 바꿔줌 )
+        //local storage에 있던 것을 끌어와서 화면에 뿌려주기
         const parsedToDos = JSON.parse(loadedToDos); //string이던 것을 다시 Object로 바꿔줌
-        parsedToDos.forEach(function(toDo){
-            paintToDo(toDo.text);
+        parsedToDos.forEach(function(toDo){ //loadedToDos를 가져온 후 parse(가져온 것을 자바스크립트 Obj로 변환), toDo는 빈 리스트
+            //forEach(function(toDo)~) :array를 위한 function!!
+            paintToDo(toDo.text); //paintToDo(toDo.text에 대해) 실행
         }); // array(parsedToDos)에 담겨 있는 것들 각각을 한번씩 함수로 실행
     }
 //이 form은 항상 showing, toDos === null(존재x)이면 할게없음, else필요x
